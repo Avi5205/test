@@ -9,7 +9,7 @@ export default function Calculator() {
   const [loading, setLoading] = useState(false);
 
   const API_BASE =
-    import.meta.env.VITE_API_BASE ||
+    import.meta.env.VITE_API_BASE_URL ||
     "http://localhost:8080" ||
     "https://test1-qkea.onrender.com";
 
