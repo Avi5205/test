@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kodder.in - Tools & Calculators</title>
-    <!-- Google AdSense (replace with your own publisher ID after approval) -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxx"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Google AdSense -->
+    <script>
+      // Load AdSense script dynamically with environment variable
+      (function () {
+        const publisherId = "ca-pub-1705087005488253"; // This will be replaced by build process
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`;
+        script.crossOrigin = "anonymous";
+        document.head.appendChild(script);
+      })();
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script

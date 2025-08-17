@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AdSense from "../components/AdSense";
+import { ADSENSE_CONFIG } from "../config/adsense";
 
 export default function Converter() {
   const [km, setKm] = useState("");
@@ -27,6 +29,9 @@ export default function Converter() {
           {km} km = {miles} miles
         </div>
       )}
+
+      {/* Google AdSense Ad */}
+      <AdSense adSlot={ADSENSE_CONFIG.AD_SLOTS.CONVERTER_PAGE} />
     </div>
   );
 }

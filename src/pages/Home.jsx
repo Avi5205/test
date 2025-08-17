@@ -1,4 +1,6 @@
 import React from "react";
+import AdSense from "../components/AdSense";
+import { ADSENSE_CONFIG } from "../config/adsense";
 
 export default function Home() {
   return (
@@ -8,10 +10,8 @@ export default function Home() {
         Your free tools, calculators, and converters hub.
       </p>
 
-      {/* Example Ad placeholder */}
-      <div className="bg-gray-200 text-gray-500 py-8 rounded">
-        [Ad space here]
-      </div>
+      {/* Google AdSense Ad */}
+      <AdSense adSlot={ADSENSE_CONFIG.AD_SLOTS.HOME_PAGE} />
     </div>
   );
 }

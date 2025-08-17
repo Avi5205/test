@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AdSense from "../components/AdSense";
+import { ADSENSE_CONFIG } from "../config/adsense";
 
 export default function Calculator() {
   const [a, setA] = useState("");
@@ -6,7 +8,10 @@ export default function Calculator() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8080";
+  const API_BASE =
+    import.meta.env.VITE_API_BASE ||
+    "http://localhost:8080" ||
+    "https://test1-qkea.onrender.com";
 
   const calculateWithAPI = async (operation, numA, numB) => {
     setLoading(true);
@@ -118,6 +123,9 @@ export default function Calculator() {
           {loading && <span className="ml-2 text-blue-600">(API)</span>}
         </div>
       )}
+
+      {/* Google AdSense Ad */}
+      <AdSense adSlot={ADSENSE_CONFIG.AD_SLOTS.CALCULATOR_PAGE} />
     </div>
   );
 }
